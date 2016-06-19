@@ -1,0 +1,93 @@
+{%- if frontend.useCDN -%}{%- set staticPath = "//" + frontend.staticFilesURI + frontend.staticFilesPath -%}{%- endif -%}
+<!DOCTYPE html>
+<html lang="en" class="{% block htmlclasses %}svg-bg{% endblock %}" id="{% block htmlid %}{% endblock %}" data-base="{{ staticPath }}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="description" content="{% block metadesc %}Site description.{% endblock %}">
+	<title>{% block title %}Express Semantic UI{% endblock %}</title>
+	{% if frontend.useCDN %}<link rel="dns-prefetch" href="{{ staticPath }}">{% endif %}
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="icon" href="{{ staticPath }}/images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon-precomposed" href="{{ staticPath }}/images/favicon/apple-touch-icon-152x152.png">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#000000">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="{{ staticPath }}/images/favicon/mstile-144x144.png">
+	{% block headcss %}
+	{{ bundle.base.styles|safe }}
+	{% endblock -%}
+</head>
+<body>
+{%- if view.dashboard %}
+{#- Responsive sidebar menu #}
+<div class="ui sidebar left vertical borderless large inverted dashboard menu">
+	<a class="item active toc close interaction" data-interaction-name="Close Menu"><i class="close icon"></i> Menu</a>
+	{% include "./navigation_menu.html" ignore missing %}
+</div>
+<div class="pusher">
+{% endif -%}
+
+	{% block header %}
+	<header>
+		<div class="ui container">
+			<div class="ui large secondary fitted text two item menu">
+				{% if view.dashboard %}<a class="toc left item"><i class="large sidebar icon"></i></a>{% endif %}
+				<a class="logo item" href="/" title="Site"><img class="ui small image" src="{{ staticPath }}/images/logo.svg" alt="Site" onerror="this.onerror=null; this.src='{{ staticPath }}/images/logo.png'"></a>
+			</div>
+		</div>
+	</header>
+	{% endblock %}
+
+	<div id="main" class="{% block mainclass %}{% endblock %}">
+		<div class="wrapper">
+
+			{%- if view.dashboard %}
+				<div class="ui equal width centered grid">
+					<div class="computer only column">
+						{#- Non-responsive main left menu #}
+						<div class="ui left fixed vertical borderless large inverted dashboard menu">
+							<a class="item logo" href="/" title="Site"><img class="ui small centered image" src="{{ staticPath }}/images/logo.svg" alt="Site" onerror="this.onerror=null; this.src='{{ staticPath }}/images/site.png'"></a>
+							{% include "./navigation_menu.html" ignore missing %}
+						</div>
+					</div>
+					<div class="sixteen wide computer column" id="dash">
+			{%- endif %}
+					<section id="content">
+					{% block bodycontent %}
+					{% endblock %}
+					</section>
+			{%- if view.dashboard %}
+					</div>
+				</div>
+			{%- endif %}
+
+		</div>
+	</div>
+
+	<footer class="ui inverted vertical footer segment">
+		<div class="ui container">
+			<div class="ui inverted equal height grid">
+				<div class="sixteen wide column center aligned">
+					Copyright &copy; 2016 <a href="/" title="Site" target="_blank">Site</a> All rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+{% if view.dashboard %}
+</div>
+{% endif %}
+{% block bodyscripts %}
+<script>
+document.write(decodeURIComponent('%3Cscript src="')
+	+('https:'==document.location.protocol ? 'https://' : 'http://')
+	+ 'ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js'
+	+ decodeURIComponent('"%3E%3C/script%3E'));
+</script>
+<script>!window.jQuery && document.write(decodeURIComponent('%3Cscript src="') + '{{ staticPath }}/jquery.js' + decodeURIComponent('"%3E%3C/script%3E'));</script>
+{{ bundle.base.scripts|safe }}
+{% endblock %}
+</body>
+</html>

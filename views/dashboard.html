@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block htmlclasses %}{% parent %} dashboard{% endblock %}{% block htmlid %}{% endblock %}
+{% block metadesc %}{% parent %}{% endblock %}
+{% block title %}{% parent %}{% endblock %}
+{% block headcss %}
+{% parent %}
+{% endblock %}
+
+	{% block header %}
+	{% parent %}
+	{% endblock %}
+
+{% block mainclass %}{% endblock %}
+
+					{% block bodycontent %}
+						<div id="main-app" class="ui main container">
+							<h1>Welcome</h1>
+						</div>
+					{% endblock %}
+
+{% block bodyscripts %}
+{% parent %}
+{% endblock %}

@@ -1,0 +1,40 @@
+/* NOTE:
+--------
+PLACE YOUR OWN CSS HERE AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS. */
+
+iframe[name='google_conversion_frame']{height:0!important;width:0!important;line-height:0!important;font-size:0!important;margin-top:-13px;float:left;}
+
+.hide{display:none!important;}
+.centered{margin-left:auto;margin-right:auto;}
+
+#toast-container{display:block;position:fixed;z-index:10000;}
+.toast{border-radius:2px;top:0;width:auto;clear:both;margin-top:10px;position:relative;max-width:100%;height:auto;min-height:48px;line-height:1.5em;word-break:break-all;background-color:#323232;padding:10px 25px;font-size:1.1rem;font-weight:300;color:#fff;display:flex;align-items:center;justify-content:space-between;}
+.toast .btn,.toast .btn-large,.toast .btn-flat{margin:0;margin-left:3rem;}
+.toast.rounded{border-radius:24px;}
+@media only screen and (max-width: 600px){
+	#toast-container{min-width:100%;bottom:0%;}
+	.toast{width:100%;border-radius:0;}
+}
+@media only screen and (min-width: 601px) and (max-width: 992px){
+	#toast-container{left:5%;bottom:7%;max-width:90%;}
+	.toast{float:left;}
+}
+@media only screen and (min-width: 993px){
+	#toast-container{top:10%;right:7%;max-width:86%;}
+	.toast{float:right;}
+}
+
+.ui.secondary.menu .toc.item{display:block;}
+.ui.left.fixed.vertical.menu{display:none;}
+
+@media screen and (max-width:767px){
+	.ui.stackable.grid > .column:not(.row){padding:0.5rem!important;}
+	.ui.form .fields > .four.wide.field{width:50%!important;}
+}
+@media only screen and (min-width:767px){
+	html.ios,html.ios body{height:100%!important;}
+}
+@media only screen and (min-width:1024px){
+	.ui.secondary.menu .toc.item{display:none;}
+	.ui.left.fixed.vertical.menu{display:block;}
+}

@@ -1,0 +1,29 @@
+{% extends './base.html' %}
+{% block htmlclasses %}{% parent %} about{% endblock %}{% block htmlid %}{% endblock %}
+{% block metadesc %}{% parent %}{% endblock %}
+{% block title %}{% parent %}{% endblock %}
+{% block headcss %}
+{% parent %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block mainclass %}{% endblock %}
+
+					{% block bodycontent %}
+					<div class="ui inverted vertical aligned segment">
+						<div class="ui inverted middle aligned masthead segment equal width column grid stackable">
+							<div class="row">
+								<div class="column">
+									<div class="ui basic segment inverted center aligned">
+										<a href="/" title="Logo" class="brand-logo darken-1"><img src="{{ staticPath }}/images/logo.svg" alt="Logo" onerror="this.onerror=null; this.src='{{ staticPath }}/images/logo.png'"></a>
+										<h1 class="ui inverted header">Cool tagline</h1>
+										<h2>Awesome description of your thing</h2>
+										<a href="#" class="ui huge button">Primary CTA <i class="right sign in icon"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{% endblock %}

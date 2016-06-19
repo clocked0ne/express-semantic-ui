@@ -1,0 +1,22 @@
+node_modules
+logs/*.log
+pids/*.pid
+
+# Gulp output logging
+.awspublish-express-semantic-ui-cdn
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Debug log from npm
+npm-debug.log
+
+# Minified/concatenated/optimised assets
+bundle.result.json
+public
+
+# Config file (may contain API credentials)
+config/config.js
