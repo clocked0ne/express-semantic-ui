@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - '6'
-before_script:
+before_install:
   - cp config/example.config.js config/config.js \
     && mkdir semantic \
     && cp node_modules/semantic-ui/dist semantic \
