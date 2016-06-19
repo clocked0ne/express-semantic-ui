@@ -2,4 +2,9 @@ language: node_js
 node_js:
   - '6'
 before_script:
-  - cp config/example.config.js config/config.js
+  - cp config/example.config.js config/config.js \
+    && mkdir semantic \
+    && cp node_modules/semantic-ui/dist semantic \
+    && cp node_modules/semantic-ui/src semantic \
+    && cp node_modules/semantic-ui/tasks semantic \
+    && cp node_modules/semantic-ui/gulpfile.js semantic
