@@ -92,10 +92,6 @@ npm test
 
 Enjoy! Feel free to fork and use for your own applications as the license permits.
 
-## Notes
-
-This uses a version locked dependency `gulp-header` of which the most recent version has a bug that breaks Gulp builds. Hopefully this can be removed at some point.
-
 ## License
 
 ```

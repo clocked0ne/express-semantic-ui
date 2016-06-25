@@ -1,4 +1,4 @@
-jQuery.fn.extend({
+jQuery.extend({
 	toast: function (message, displayLength, className, completeCallback){
 		className = className || "";
 

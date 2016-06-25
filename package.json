@@ -1,7 +1,7 @@
 {
   "name": "express-semantic-ui",
   "description": "Node.js Express app boilerplate for a web frontend utilising Semantic UI",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Nigel Horton <webdevelopment@clocked0ne.co.uk>",
   "scripts": {
@@ -41,7 +41,6 @@
     "gulp": "^3.9.0",
     "gulp-awspublish": "^3.2.0",
     "gulp-bundle-assets": "^2.27.0",
-    "gulp-header": "1.8.2",
     "gulp-imagemin": "^3.0.0",
     "imagemin-pngquant": "^5.0.0",
     "mocha": "^2.5.0",
