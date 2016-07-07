@@ -1,6 +1,7 @@
 {
 	"base": "semantic/",
-	"version": "2.1.8",
+	"version": "2.2.1",
+	"autoInstall": true,
 	"paths": {
 		"source": {
 			"config": "src/theme.config",

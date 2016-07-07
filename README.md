@@ -15,7 +15,7 @@ The only exception to this is that the Gulp tasks include a CloudFront publisher
 
 ## Install
 
-Requires Node.js, recommended `6.0.0` or greater
+Requires Node.js, recommended `6.3.0` or greater
 
 ```bash
 npm install

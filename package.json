@@ -1,7 +1,8 @@
 {
   "name": "express-semantic-ui",
   "description": "Node.js Express app boilerplate for a web frontend utilising Semantic UI",
-  "version": "1.0.1",
+  "keywords": ["express","semantic ui","semantic","boilerplate"],
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Nigel Horton <webdevelopment@clocked0ne.co.uk>",
   "scripts": {
@@ -21,23 +22,23 @@
     "url": "https://github.com/clocked0ne/express-semantic-ui/issues"
   },
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body-parser": "^1.15.2",
     "check-types": "^7.0.0",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
     "express": "^4.14.0",
-    "express-session": "^1.13.0",
+    "express-session": "^1.14.0",
     "morgan": "^1.7.0",
     "pm2": "^1.1.3",
-    "semantic-ui": "^2.1.8",
+    "semantic-ui": "^2.2.1",
     "serve-favicon": "^2.3.0",
     "session-file-store": "^0.2.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "del": "^2.2.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.0",
     "gulp-awspublish": "^3.2.0",
     "gulp-bundle-assets": "^2.27.0",
@@ -47,7 +48,7 @@
     "should": "^9.0.0"
   },
   "engines": {
-    "node": "^6.2.0",
-    "npm": "^3.8.6"
+    "node": "^6.3.0",
+    "npm": "^3.10.3"
   }
 }
