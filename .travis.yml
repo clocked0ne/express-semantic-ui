@@ -3,9 +3,4 @@ node_js:
   - '6'
 before_install:
   - cp config/example.config.js config/config.js
-  - mkdir semantic
-  - mkdir semantic/dist
-  - mkdir semantic/src
-  - mkdir semantic/src/definitions
-  - touch semantic/gulpfile.js
-  - touch semantic/theme.config
+
